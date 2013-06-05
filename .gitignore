@@ -1,0 +1,45 @@
+# General HSQL Database Files
+*Db.properties
+*Db.script
+/prodDb.*
+/*DB.*
+
+# GGTS Files 
+.settings
+.classpath
+.launch
+.project
+/*.launch
+/*.tmproj
+/eclipse
+
+# Logs
+stacktrace.log
+/*.log
+
+# Web Application Files
+/web-app/plugins
+/web-app/WEB-INF/classes
+/.link_to_grails_plugins/
+/target-eclipse/
+
+# Project and Plugin Release Files
+*.war
+*.zip
+/plugin.xml
+
+# Other
+*.iws
+/cobertura.ser
+/target/
+/out/
+
+# Database dumps
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
