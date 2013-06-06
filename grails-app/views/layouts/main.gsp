@@ -12,28 +12,19 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
-		<script src="js/bootstrap.min.js"></script>
+		<link href="/homelink/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/homelink/css/main.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/homelink/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" media="screen">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="/homelink/js/bootstrap.min.js"></script>
+		<script src="/homelink/js/application.js"></script>
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body>
-		<nav class="navbar">
-			<div class="navbar-inner">
-				<g:link controller="home" action="index" class="brand">HomeLink</g:link>
-				<ul class="nav">
-					<li class="active"><g:link controller="home" action="index" class="brand">Home</g:link></li>
-				</ul>
-			</div>
-		</nav>
-		<div class="container-fluid">
+		<g:render template="/layouts/navbar" />
 		<g:layoutBody/>
-		</div>
-		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
-		<g:javascript library="jquery"/>
 		<r:layoutResources />
 	</body>
 </html>
