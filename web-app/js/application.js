@@ -7,3 +7,8 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+
+$(document).ready(function() {
+	$(".message").hide().fadeIn(500);
+	$(".message").delay(4000).fadeOut(500);
+})

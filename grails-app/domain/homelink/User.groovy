@@ -11,8 +11,11 @@ class User {
 	String email
 	
     static constraints = {
-		username(blank:false)
-		password()
+		username(blank:false, size:3..20, unique:true)
+		password(blank:false)
+		firstName(blank:false)
+		lastName(blank:false)
+		email(blank:false)
     }
 	
 	String toString() {

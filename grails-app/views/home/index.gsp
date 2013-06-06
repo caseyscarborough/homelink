@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>Welcome</title>
 	</head>
 	<body>
 		<div class="row-fluid">
 			<div class="span8 offset2 main">
 				<h1>Welcome to HomeLink!</h1>
 				<g:if test="${flash.message}">
-					<div id="message" class="message alert">
+					<div id="message" class="message alert-default">
 						${flash.message}
 					</div>
 				</g:if>

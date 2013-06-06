@@ -5,9 +5,10 @@ class SecurityFilters {
     def filters = {
         all(controller:'*', action:'*') {
             before = {
-				if(!session.user && !(controllerName == "home") && !(controllerName == "session")) {
+				if(!session.user && !(controllerName == "home") && !(controllerName == "session") && !((controllerName == "account") && (actionName == "create" || actionName == "save"))) {
 					flash.message = "Please login first."
-					redirect(controller:"session", action:"login")
+					def targetURL = request.forwardURI - request.contextPath
+					redirect(controller:"session", action:"login", params:[target:targetURL])
 				}
             }
             after = { Map model ->

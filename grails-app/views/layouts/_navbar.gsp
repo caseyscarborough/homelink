@@ -1,11 +1,11 @@
-<nav class="navbar">
+<nav class="navbar navbar-inverse">
 	<div class="navbar-inner">
 		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         	<span class="icon-bar"></span>
         	<span class="icon-bar"></span>
         	<span class="icon-bar"></span>
 		</a>
-		<g:link controller="home" action="index" class="brand">HomeLink</g:link>
+		<g:link controller="home" action="index" class="brand">HomeLink&nbsp;<sup>(beta)</sup></g:link>
 		<div class="nav-collapse">	
 			<ul class="nav">
 				<li>&nbsp;</li>
@@ -18,6 +18,7 @@
 			</ul>
 			<ul class="nav pull-right">
 				<g:if test="${session.user}">
+				<li><g:link controller="account"><small><i class="icon-user icon-white"></i>&nbsp;Welcome, ${session.user.firstName} ${session.user.lastName}!</small></g:link></li>
 				<li><g:link controller="session" action="logout">Logout</g:link></li>
 				</g:if>
 				<g:else>

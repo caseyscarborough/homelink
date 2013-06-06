@@ -21,7 +21,11 @@ class SessionController {
 		} else {
 			session.user = user
 			flash.message = "Login successful."
-			redirect(controller:"home", action:"index")
+			if(params.redirectURL != null) {
+				redirect(url: params.redirectURL)
+			} else {
+				redirect(controller:"home", action:"index")
+			}
 		}
 	}
 	
