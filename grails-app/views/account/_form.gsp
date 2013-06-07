@@ -1,44 +1,29 @@
 <%@ page import="homelink.User" %>
 
+<table style="margin: 0 auto;">
+<tr class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
+	<td><label for="username"><g:message code="user.username.label" default="Username" /><span class="required-indicator">&nbsp;*&nbsp;</span></label></td>
+	<td><g:textField name="username" required="" value="${userInstance?.username}"/></td>
+</tr>
 
+<tr class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+	<td><label for="password"><g:message code="user.password.label" default="Password" /><span class="required-indicator">*</span></label></td>
+	<td><g:passwordField name="password" required="" value="${userInstance?.password}"/></td>
+</tr>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
-	<label for="username">
-		<g:message code="user.username.label" default="Username" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="username" required="" value="${userInstance?.username}"/>
-</div>
+<tr class="fieldcontain ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
+	<td><label for="email"><g:message code="user.email.label" default="Email" /><span class="required-indicator">*</span></label></td>
+	<td><g:textField name="email" required="" value="${userInstance?.email}"/></td>
+</tr>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-	<label for="password">
-		<g:message code="user.password.label" default="Password" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:passwordField name="password" required="" value="${userInstance?.password}"/>
-</div>
+<tr class="fieldcontain ${hasErrors(bean: userInstance, field: 'firstName', 'error')} required">
+	<td><label for="firstName"><g:message code="user.firstName.label" default="First Name" /><span class="required-indicator">*</span></label></td>
+	<td><g:textField name="firstName" required="" value="${userInstance?.firstName}"/></td>
+</tr>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
-	<label for="email">
-		<g:message code="user.email.label" default="Email" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="email" required="" value="${userInstance?.email}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'firstName', 'error')} required">
-	<label for="firstName">
-		<g:message code="user.firstName.label" default="First Name" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="firstName" required="" value="${userInstance?.firstName}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'lastName', 'error')} required">
-	<label for="lastName">
-		<g:message code="user.lastName.label" default="Last Name" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="lastName" required="" value="${userInstance?.lastName}"/>
-</div>
+<tr class="fieldcontain ${hasErrors(bean: userInstance, field: 'lastName', 'error')} required">
+	<td><label for="lastName"><g:message code="user.lastName.label" default="Last Name" /><span class="required-indicator">*</span></label></td>
+	<td><g:textField name="lastName" required="" value="${userInstance?.lastName}"/></td>
+</tr>
+</table>
 

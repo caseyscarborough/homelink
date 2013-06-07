@@ -16,6 +16,26 @@ environments {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
+		
+		// Uncomment for localhost MySQL connection
+/*
+		dataSource {
+			dbCreate = "create-drop"
+			url = "jdbc:mysql://localhost:3306/homelink"
+			driverClassName = "com.mysql.jdbc.Driver"
+			username = "root"
+			password = "root"
+			properties {
+				maxActive = 100
+				maxIdle = 25
+				minIdle = 5
+				initialSize = 10
+				minEvictableIdleTimeMillis = 60000
+				timeBetweenEvictionRunsMillis = 60000
+				maxWait = 10000
+			}
+		}
+*/
     }
     test {
         dataSource {

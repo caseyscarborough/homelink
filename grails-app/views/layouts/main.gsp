@@ -15,7 +15,7 @@
 		<link href="/homelink/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="/homelink/css/main.css" rel="stylesheet" type="text/css" media="screen">
 		<link href="/homelink/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" media="screen">
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="/homelink/js/bootstrap.min.js"></script>
 		<script src="/homelink/js/application.js"></script>
 		<g:layoutHead/>
@@ -24,6 +24,7 @@
 	<body>
 		<g:render template="/layouts/navbar" />
 		<g:layoutBody/>
+		<g:render template="/layouts/footer" />
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<r:layoutResources />
 	</body>

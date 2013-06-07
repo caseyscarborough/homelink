@@ -2,11 +2,11 @@
 	<g:each in="${shoppingLists}" var="shoppingList">
 		<div id="shoppingList-${shoppingList.id}">
 		<g:render template="shoppingList" collection="${shoppingList}" />
-		</div><br>
+		</div>
 		<g:formRemote onSuccess="document.getElementById('addItemNameField-${shoppingList.id}').value = '';" name="addItemForm" url="[controller:'shopping',action:'addItem',id:shoppingList.id]" method="POST" update="shoppingList-${shoppingList.id}" placeholder="add item">
-			<g:textField id="addItemNameField-${shoppingList.id}" name="name" /><br>
-			<g:submitButton name="addItem" value="Add Item" class="btn btn-default" />
-		</g:formRemote><br>
+			<g:textField id="addItemNameField-${shoppingList.id}" name="name" style="font-size: 11.9px; height:15.9px; width: 100px;" placeholder="Add an item..." />
+			<g:submitButton name="addItem" value="Add Item" class="btn btn-default btn-small" />
+		</g:formRemote>
 	</g:each>
 </g:if>
 <g:else>

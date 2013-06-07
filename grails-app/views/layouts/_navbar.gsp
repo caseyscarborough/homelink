@@ -9,7 +9,7 @@
 		<div class="nav-collapse">	
 			<ul class="nav">
 				<li>&nbsp;</li>
-				<g:if test="${controllerName == "home"}"><li class="active"></g:if><g:else><li></g:else>
+				<li>
 					<g:link controller="home" action="index">Home</g:link>
 				</li>
 				<g:if test="${controllerName == "shopping"}"><li class="active"></g:if><g:else><li></g:else>

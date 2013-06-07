@@ -11,7 +11,7 @@ class BootStrap {
 			new ShoppingItem(name:"Bread", list:groceriesList, isNeeded:true).save()
 			new ShoppingItem(name:"Milk", list:groceriesList, isNeeded:true).save()
 			new ShoppingItem(name:"Eggs", list:groceriesList, isNeeded:true).save()
-			new ShoppingItem(name:"Toothpaste", list:groceriesList, isNeeded:false).save()
+			new ShoppingItem(name:"Toothpaste", list:groceriesList, isNeeded:true).save()
 			new ShoppingItem(name:"Toilet Paper", list:groceriesList, isNeeded:true).save()
 			def partsList = new ShoppingList(name:"Parts", description:"List of parts to get from the auto-parts store", items:[:], owner:casey).save()
 			new ShoppingItem(name:"Air Filter", list:partsList, isNeeded:true).save()

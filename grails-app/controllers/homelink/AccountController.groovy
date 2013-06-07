@@ -6,6 +6,10 @@ class AccountController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	def index() {
+		redirect(url:"/")
+	}
+	
     def create() {
         [userInstance: new User(params)]
     }

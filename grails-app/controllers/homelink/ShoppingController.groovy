@@ -43,12 +43,39 @@ class ShoppingController {
 
         try {
             shoppingItem.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'reminder.label', default: 'Reminder'), id])
             render(template:"/shopping/shoppingList", model:[shoppingList:shoppingItem.list])
         }
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'reminder.label', default: 'Reminder'), id])
             redirect(action: "list")
         }
+	}
+	
+	def deleteList(Long id) {
+		def shoppingList = ShoppingList.get(id)
+		if(!shoppingList) {
+			println "fail"
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'reminder.label', default: 'Reminder'), id])
+			redirect(action: "list")
+			return
+		}
+		
+		try {
+			shoppingList.delete(flush: true)
+			render(template:"/shopping/shoppingLists", model:[shoppingLists:session.user.getShoppingLists()])
+		}
+		catch (DataIntegrityViolationException e) {
+			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'reminder.label', default: 'Reminder'), id])
+			redirect(action: "list")
+		}
+	}
+	
+	def changeIsNeeded() {
+		def shoppingItem = ShoppingItem.get(params.id)
+		if(shoppingItem.isNeeded) {
+			shoppingItem.isNeeded = false
+		} else {
+			shoppingItem.isNeeded = true
+		}
 	}
 }

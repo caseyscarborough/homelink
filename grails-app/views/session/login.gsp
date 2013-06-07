@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Login</title>
@@ -9,7 +10,7 @@
 	<div class="span6 offset3 main">
 	<h2>Login</h2>
 	<g:if test="${flash.message}">
-		<div id="message" class="alert-default">
+		<div class="message alert-default">
 			${flash.message}
 		</div>
 	</g:if>
@@ -17,11 +18,11 @@
 		<table style="margin:0 auto;">
 			<tr>
 				<td><label for="login">Username:&nbsp;</label></td>
-				<td><g:textField name="username" value='${params.username}' /></td>
+				<td><g:textField name="username" value='${params.username}' style="width:140px"/></td>
 			</tr>
 			<tr>
 				<td><label for="password">Password:</label></td>
-				<td><g:passwordField name="password" value='' /></td>
+				<td><g:passwordField name="password" value='' style="width:140px"/></td>
 				<g:hiddenField name="redirectURL" value="${params.target}"/>
 			<tr>
 		</table>

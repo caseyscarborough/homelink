@@ -1,4 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Muli);
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli'), url(/homelink/fonts/muli.woff) format('woff');
+}
 
 /*
 Colors:
@@ -11,10 +16,24 @@ Almost-black: #1E1E20;
 
 
 */
+* {
+	-webkit-font-smoothing: antialiased;
+}
 
+html {
+	height: 100%;
+}
 
 body {
-	background: #D9D3CA;
+	background: #ffffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #f7eede 64%, #f7eede 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(64%,#f7eede), color-stop(100%,#f7eede)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#f7eede 64%,#f7eede 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#f7eede 64%,#f7eede 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#f7eede 64%,#f7eede 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #ffffff 0%,#f7eede 64%,#f7eede 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7eede',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
 	font-family: 'Muli', sans-serif;
 	color: #2A2C2B;
 }
@@ -29,6 +48,7 @@ a:visited {
 }
 
 h1 {
+	padding-bottom: 10px;
 	border-bottom: 1px solid #ddd;
 	color: #2A2C2B;
 }
@@ -37,6 +57,54 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+}
+
+
+.home-banner {
+	margin: -20px -20px 20px -20px;
+	padding: 20px 20px 40px;
+	background: #1E1E20;
+	color: white;
+	background: #2f2f33; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #2f2f33 0%, #1e1e20 50%, #1e1e20 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2f2f33), color-stop(50%,#1e1e20), color-stop(100%,#1e1e20)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #2f2f33 0%,#1e1e20 50%,#1e1e20 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #2f2f33 0%,#1e1e20 50%,#1e1e20 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #2f2f33 0%,#1e1e20 50%,#1e1e20 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #2f2f33 0%,#1e1e20 50%,#1e1e20 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f33', endColorstr='#1e1e20',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	box-shadow: 0px 5px 5px #999;
+}
+
+.home-banner-contents {
+	padding: 10px;
+	margin: 20px;
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.home-banner-contents h1 {
+	color: white;	
+	font-size: 56px;
+	text-shadow: 1px 1px 10px #111;
+	line-height: 48px;
+	padding-bottom: 20px;
+}
+
+.info {
+	padding: 10px;
+	text-align: justify;
+}
+
+.info .icon {
+	margin-top: 5px;
+	padding: 0px;
+	text-align: justify;
+}
+
+.create-account-button {
+	padding: 5px;
 }
 
 .main {
@@ -57,8 +125,33 @@ ul {
 	color: #eee;
 }
 
+/* .navbar .nav > li > a {
+	color: white;
+}
+
+.navbar .nav > li > a:hover {
+	color: #DC3522;
+}
+ */
+ 
 .message {
 	display:none;
+}
+
+.footer {
+	text-align:right;
+	padding:20px;
+	margin-top:40px;
+}
+
+.footer hr {
+	display: block; 
+	height: 1px;
+    border: 0; 
+    border-top: 1px solid #999;
+    margin: 1em 0; 
+    padding: 0;
+    box-shadow: 0px 0px 5px white;
 }
 
 
@@ -119,7 +212,12 @@ ul {
   background-color: #1E1E20;
   background-image: none;
   filter: none;
+  border: none;
   border-radius: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 
@@ -127,7 +225,7 @@ ul {
   padding: 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: #f8f3eA;
+  background-color: #f7eede;
   border: 1px solid #f6f0e2;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
@@ -138,4 +236,30 @@ ul {
 .alert-default,
 .alert-default h4 {
   color: #99938A;
+}
+
+input[type="text"] {
+	margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+
+	.get-started {
+		text-align: center;
+	}
+	.create-account-button {
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	.create-account-button {
+		text-align: center;
+	}
+	
+	.navbar-inverse .navbar-inner {
+		padding: 0px 10px;
+	}
+	
 }
