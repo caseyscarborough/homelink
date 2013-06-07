@@ -22,7 +22,7 @@ For the development environment, the application uses the default Grails in-memo
 
 ```groovy
 dataSource {
-	dbCreate = "create-drop" // Can be changed to 'change', 'update', or 'validate'
+	dbCreate = "create-drop" // Can be changed to 'create', 'update', or 'validate'
 	url = "jdbc:mysql://localhost:3306/homelink"
 	driverClassName = "com.mysql.jdbc.Driver"
 	username = "root"
@@ -52,6 +52,9 @@ grails upgrade  # If your version of Grails is greater than 2.2.2
 grails run-app
 ```
 
+After running the commands, you can navigate to [http://localhost:8080/homelink][homelink] in your web browser to see the application in action.
+
 
 
 [screenshot1]: https://github.com/caseyscarborough/homelink/raw/master/img/main.png "The application's main layout."
+[homelink]: http://localhost:8080/homelink
