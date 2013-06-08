@@ -12,6 +12,7 @@ class UrlMappings {
 		"/shopping/list/$id"(controller:"shopping", action:"showList", id: id)
 		"/shopping/list/$id/addItem"(controller:"shopping", action:"addItem", id: id)
 		"/shopping"(controller:"shopping", action:"index")
+		"/reminders"(controller:"shopping", action:"index")
 		"/new-account"(controller:"account", action:"create")
 	}
 }

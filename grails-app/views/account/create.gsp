@@ -9,13 +9,13 @@
 	<div class="container-fluid">
 	<div class="row-fluid">
 	<div class="span6 offset3 main">
-	<h2>Create Account</h2>
+	<h1 style="text-align:left">Create Account</h1><br>
 	<g:if test="${flash.message}">
 		<div class="message alert-default">
 			${flash.message}
 		</div>
 	</g:if>
-	<g:hasErrors bean="${userInstance}">
+	<%--<g:hasErrors bean="${userInstance}">
 	<div class="message alert alert-error">
 		<ul class="errors" role="alert">
 			<g:eachError bean="${userInstance}" var="error">
@@ -23,13 +23,13 @@
 			</g:eachError>
 		</ul>
 	</div>
-	</g:hasErrors>
+	</g:hasErrors>--%>
 	<g:form action="save">
 		<fieldset class="form">
 			<g:render template="form"/>
-		</fieldset>
+		</fieldset><br>
 		<fieldset class="buttons">
-			<g:submitButton name="create" class="save btn btn-default" value="Create Account" />
+			<g:submitButton name="create" class="save btn btn-default btn-large" value="Create Account" />
 		</fieldset>
 	</g:form>
 	</div>

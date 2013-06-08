@@ -18,6 +18,11 @@ class BootStrap {
 			new ShoppingItem(name:"Oil Filter", list:partsList, isNeeded:true).save()
 			new ShoppingItem(name:"5QT Synthetic Oil", list:partsList, isNeeded:true).save()
 			new ShoppingItem(name:"Microfiber Towels", list:partsList, isNeeded:true).save()
+			
+
+			new Reminder(name:"Take out the trash", description:"Don't forget to take the trash out.", owner:casey, remindAt: new Date(113, 5, 28)).save()
+			new Reminder(name:"Finish school project", description:"Finish that one project for school.", owner:casey, remindAt: new Date(113, 7, 30)).save()
+			new Reminder(name:"Call mom", description:"Call mom about plans for the holiday.", owner:casey, remindAt: new Date(113, 10, 20)).save()
 		}
 		
     }

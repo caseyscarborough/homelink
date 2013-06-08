@@ -29,4 +29,8 @@ class User {
 	ShoppingList[] getShoppingLists() {
 		ShoppingList.findAllByOwner(this, [sort: "id", order: "asc"])
 	}
+	
+	Reminder[] getReminders() {
+		Reminder.findAllByOwner(this, [sort: "id", order: "asc"])
+	}
 }

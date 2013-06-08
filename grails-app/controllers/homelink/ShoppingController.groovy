@@ -54,7 +54,6 @@ class ShoppingController {
 	def deleteList(Long id) {
 		def shoppingList = ShoppingList.get(id)
 		if(!shoppingList) {
-			println "fail"
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'reminder.label', default: 'Reminder'), id])
 			redirect(action: "list")
 			return

@@ -8,7 +8,7 @@
 	<div class="container-fluid">
 	<div class="row-fluid">
 	<div class="span6 offset3 main">
-	<h2>Login</h2>
+	<h1 style="text-align:left;">Login</h1><br>
 	<g:if test="${flash.message}">
 		<div class="message alert-default">
 			${flash.message}
@@ -18,17 +18,17 @@
 		<table style="margin:0 auto;">
 			<tr>
 				<td><label for="login">Username:&nbsp;</label></td>
-				<td><g:textField name="username" value='${params.username}' style="width:140px"/></td>
+				<td><g:textField name="username" class="input-medium" value='' /></td>
 			</tr>
 			<tr>
 				<td><label for="password">Password:</label></td>
-				<td><g:passwordField name="password" value='' style="width:140px"/></td>
+				<td><g:passwordField name="password" class="input-medium" value='' /></td>
 				<g:hiddenField name="redirectURL" value="${params.target}"/>
 			<tr>
 		</table>
 		<br>
 		<p>Need an account? Click <g:link controller="account" action="create">here</g:link>.<br><br>
-		<g:actionSubmit class="btn btn-default btn-large" value="Login" action="handleLogin" />
+		<g:submitButton name="loginButton" class="btn btn-default btn-large" value="Login" />
 	</g:form>
 	</div>
 	</div>

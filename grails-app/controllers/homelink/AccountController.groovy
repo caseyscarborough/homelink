@@ -25,15 +25,14 @@ class AccountController {
 		params.password = User.hashPassword(params.password)
         def userInstance = new User(params)
         if (!userInstance.save(flush:true)) {
-			def error
 			if(params.username.size() < 3) {
-				error = "Username must be at least three characters."
+				flash.message = "Username must be at least three characters."
 			} else if(params.username.size() > 20) {
-				error = "Username must be 20 characters or less."
+				flash.message = "Username must be 20 characters or less."
 			} else if(User.findByUsername(params.username)) {
-				error = "Username already taken. Please try again."
+				flash.message = "Username already taken. Please try again."
 			}
-            render(template: "/account/createModal", model:[userInstance: userInstance, error: error, password: password])
+            render(view: "/account/create", model:[userInstance: userInstance, password: password])
             return
         }
 

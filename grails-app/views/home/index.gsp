@@ -40,7 +40,7 @@
 					will be implemented with time.</p>
 					</div>
 					<div class="span4 offset1">
-						<img src="/homelink/images/macbook_shopping.png" />
+						<img src="/homelink/images/macbook.png" />
 					</div>
 				</div>
 			</div>

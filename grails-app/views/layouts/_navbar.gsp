@@ -8,12 +8,12 @@
 		<g:link controller="home" action="index" class="brand">HomeLink&nbsp;<sup>(beta)</sup></g:link>
 		<div class="nav-collapse">	
 			<ul class="nav">
-				<li>&nbsp;</li>
-				<li>
-					<g:link controller="home" action="index">Home</g:link>
-				</li>
+				<li><g:link controller="home" action="index">Home</g:link></li>
 				<g:if test="${controllerName == "shopping"}"><li class="active"></g:if><g:else><li></g:else>
 					<g:link controller="shopping" action="index">Shopping</g:link>
+				</li>
+				<g:if test="${controllerName == "reminder"}"><li class="active"></g:if><g:else><li></g:else>
+					<g:link controller="reminder" action="index">Reminders</g:link>
 				</li>
 			</ul>
 			<ul class="nav pull-right">
