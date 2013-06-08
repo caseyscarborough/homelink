@@ -3,8 +3,19 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome</title>
+		<script type="text/javascript">
+		function closeModal() {
+			document.getElementById('closeModal').click();
+		}
+		</script>
+	
 	</head>
 	<body>
+	
+	<div id="createAccountModal" class="modal hide fade">
+		<g:render template="/account/createModal" />
+	</div>
+	
 	<div class="container-fluid">
 		<div class="row-fluid home-banner">
 			<div class="span12">
@@ -37,12 +48,19 @@
 	</div><br>
 	<div class="container-fluid">
 		<div class="row-fluid">
+			<g:if test="${session.user == null}">
 			<div class="span6 offset2 get-started">
 				<h3>Get started using Homelink in just minutes.</h3>
 			</div>
 			<div class="span3 create-account-button">
-				<g:link controller="account" action="create"><button class="btn btn-large btn-default">Create account</button></g:link>
+				<g:link controller="account" action="create"><button <%--a href="#createAccountModal"--%> class="btn btn-large btn-default" <%--data-toggle="modal" role="button"--%>>Create account</button></g:link>
 			</div>
+			</g:if>
+			<g:else>
+			<div class="span8 offset2">
+				<h3 style="text-align:center;">Welcome to your HomeLink, ${session.user.firstName}!</h3>
+			</div>
+			</g:else>
 		</div>
 	</div><br><br>
 	<div class="container-fluid">

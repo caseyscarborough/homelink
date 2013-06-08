@@ -35,6 +35,7 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7eede',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	
 	font-family: 'Muli', sans-serif;
+	font-size: 16px;
 	color: #2A2C2B;
 }
 
@@ -45,6 +46,7 @@ a {
 a:hover,
 a:visited {
 	color: #DC3522;
+	text-decoration: none;
 }
 
 h1 {
@@ -107,6 +109,11 @@ ul {
 	padding: 5px;
 }
 
+#createAccountForm {
+	padding: 0;
+	margin: 0;
+}
+
 .main {
 	background: #fff;
 	border-radius: 4px;
@@ -133,7 +140,7 @@ ul {
 	color: #DC3522;
 }
  */
- 
+
 .message {
 	display:none;
 }
@@ -154,10 +161,20 @@ ul {
     box-shadow: 0px 0px 5px white;
 }
 
+.shoppingList {
+	text-align: center;
+	padding-left: 20px;
+}
+
+.accordion-toggle h3,
+.accordion-toggle h4 {
+	padding: 0px;
+	line-height: 10px;
+}
 
 /* Override properties */
 .close {
-	float: none;
+	float: right;
 	font-size:20px;
 	font-weight:bold;
 	line-height:20px;

@@ -26,7 +26,7 @@
 				<g:hiddenField name="redirectURL" value="${params.target}"/>
 			<tr>
 		</table>
-		
+		<br>
 		<p>Need an account? Click <g:link controller="account" action="create">here</g:link>.<br><br>
 		<g:actionSubmit class="btn btn-default btn-large" value="Login" action="handleLogin" />
 	</g:form>

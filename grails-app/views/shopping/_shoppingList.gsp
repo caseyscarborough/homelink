@@ -1,9 +1,4 @@
-<h2>${shoppingList}&nbsp;<a id="list-${shoppingList.id}-close" class="close" 
-			onclick="${remoteFunction(
-				action: 'deleteList',
-				id: shoppingList.id,
-				update: [success: 'shoppingLists']
-			)}">&times;</a></h2>
+<div class="shoppingList">
 <ul>
 	<g:each in="${shoppingList.items}" var="item">
 		<li id="item-${item.id}">
@@ -22,3 +17,4 @@
 		</li>
 	</g:each>
 </ul>
+</div>
