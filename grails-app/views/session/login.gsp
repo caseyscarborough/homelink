@@ -11,7 +11,7 @@
 	<h1 style="text-align:left;">Login</h1><br>
 	<g:if test="${flash.message}">
 		<div class="message alert-default">
-			${flash.message}
+			${flash.message}<a class="close" data-dismiss="alert" href="#">&times;</a>
 		</div>
 	</g:if>
 	<g:form action="handleLogin" name="loginForm" method="post">

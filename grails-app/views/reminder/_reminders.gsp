@@ -7,8 +7,8 @@
 <g:each in="${reminders}" status="i" var="reminder">
 <div class="accordion" id="accordion" style="padding:0; margin:0;text-align:left;">
 <div class="accordion-group" style="border:none;border-bottom:1px solid #e5e5e5">
-<div class="accordion-heading<% if(timestamp > new Date(reminder.remindAt.getTime())) { println " alert alert-error'" } %>">
-	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#${i+1}"><h4>${reminder}<span style="float:right;" id="reminder-${i}-close" class="close" 
+<div class="accordion-heading">
+	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#${i+1}"><h4<% if(timestamp < new Date(reminder.remindAt.getTime())) { println " style=\"color:#1E1E20;\"" } %>>${reminder}<span style="float:right;" id="reminder-${i}-close" class="close" 
 			onclick="${remoteFunction(
 				action: 'deleteReminder',
 				id: reminder.id,
