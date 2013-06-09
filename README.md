@@ -39,8 +39,8 @@ dataSource {
 }
 ```
 
-Using the Application
----------------------
+Running the Application
+-----------------------
 
 To run the application, download the repository and unzip it or clone the repository to your local machine using the following command:
 ```
@@ -54,7 +54,20 @@ grails run-app
 
 After running the commands, you can navigate to [http://localhost:8080/homelink][homelink] in your web browser to see the application in action.
 
+Using the Application
+---------------------
 
+After opening the HomeLink application in the browser, you can login using the username <code>casey</code> and the password <code>password</code> to view the application with sample data populated, or you may create your own account and populate your own.
+
+As of now, there are two main sections, Shopping and Reminders.
+
+### Shopping
+
+The shopping section is a place used to keep track of all of your shopping lists. Lists are added through the small AJAX form at the bottom of the page. Each list is added to the 'accordion' group, and from there you may add items to that list from the small form inside. Lists and items can be deleted by clicking the &times; symbol next to the item or list.
+
+### Reminders
+
+The reminders section, not surprisingly, is used to keep track of reminders. The page displays a list of all of your reminders from oldest to newest. You click the reminders to view more information about them or click the &times; symbol to delete them. New reminders can be created using the form at the bottom of the page. If a reminder has 'expired', or if the remind date is past the current date, the date will be displayed in red.
 
 [screenshot1]: https://github.com/caseyscarborough/homelink/raw/master/img/main.png "The application's main layout."
 [homelink]: http://localhost:8080/homelink
