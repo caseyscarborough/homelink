@@ -1,5 +1,5 @@
 <%@ page import="homelink.User" %>
-
+<div style="text-align:left;">
 <table style="margin:0 auto;">
 <tr class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
 	<td><label for="username" style="float:right;"><g:message code="user.username.label" default="Username" /><span class="required-indicator">&nbsp;*&nbsp;</span></label></td>
@@ -26,4 +26,4 @@
 	<td><g:textField name="lastName" required="" value="${userInstance?.lastName}" class="input-medium" /></td>
 </tr>
 </table>
-
+</div>

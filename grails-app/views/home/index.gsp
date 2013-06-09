@@ -49,11 +49,12 @@
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<g:if test="${session.user == null}">
-			<div class="span6 offset2 get-started">
+			<div class="span5 offset2 get-started">
 				<h3>Get started using Homelink in just minutes.</h3>
 			</div>
 			<div class="span3 create-account-button">
 				<g:link controller="account" action="create"><button <%--a href="#createAccountModal"--%> class="btn btn-large btn-default" <%--data-toggle="modal" role="button"--%>>Create account</button></g:link>
+				&nbsp;&nbsp;&nbsp;<g:link controller="session" action="login"><button class="btn btn-large btn-inverse">Login</button></g:link>
 			</div>
 			</g:if>
 			<g:else>

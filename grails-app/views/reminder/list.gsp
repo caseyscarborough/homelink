@@ -6,6 +6,7 @@
 	<script type="text/javascript">
 	function clearFields() {
 		document.getElementById('addReminderField').value = '';
+		document.getElementById('addReminderDescription').value = '';
 		document.getElementById('addReminderDate').value = '';
 	}
 	</script>
@@ -22,7 +23,7 @@
 		<br><br>
 		<g:formRemote onSuccess="clearFields();" name="addReminderForm" style="clear:both;" url="[controller:'reminder', action:'addReminder']" method="POST" update="reminders">
 			<g:textField style="width:225px;" id="addReminderField" name="name" placeholder="Name..." /><br>
-			<g:textArea style="width:225px;" name="description" placeholder="Description..." /><br>
+			<g:textArea style="width:225px;" id="addReminderDescription" name="description" placeholder="Description..." /><br>
 			<input style="width:225px;" id="addReminderDate" type="datetime-local" name="remindAt" /><br>
 			<g:submitButton style="width:240px;" name="addReminder" value="Add New Reminder" class="btn btn-default" />
 		</g:formRemote>

@@ -33,4 +33,8 @@ class User {
 	Reminder[] getReminders() {
 		Reminder.findAllByOwner(this, [sort: "id", order: "asc"])
 	}
+	
+	TodoList[] getTodoLists() {
+		TodoList.findAllByOwner(this, [sort: "id", order: "asc"])
+	}
 }
