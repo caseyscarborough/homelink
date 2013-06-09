@@ -69,5 +69,32 @@ The shopping section is a place used to keep track of all of your shopping lists
 
 The reminders section, not surprisingly, is used to keep track of reminders. The page displays a list of all of your reminders from oldest to newest. You click the reminders to view more information about them or click the &times; symbol to delete them. New reminders can be created using the form at the bottom of the page. If a reminder has 'expired', or if the remind date is past the current date, the date will be displayed in red.
 
+### Todos
+
+The todos section is very similar in layout to the shopping section. You can create todo lists, and add items to each one using the forms provided. Lists or items can be deleted in the same way as before, by clicked its respective &times; symbol.
+
+### Email Functionality
+
+If you'd like the application to send emails, you must change the settings for the mail plugin in the <code>grails-app/conf/Config.groovy</code> file around line 70 (shown below). 
+
+```groovy
+grails {
+	mail {
+	  host = "smtp.gmail.com"
+	  port = 465
+	  username = "yourusername@gmail.com"
+	  password = "yourpassword"
+	  props = ["mail.smtp.auth":"true",
+			   "mail.smtp.socketFactory.port":"465",
+			   "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+			   "mail.smtp.socketFactory.fallback":"false"]
+	}
+}
+```
+These settings are currently set up for a Gmail account, and the only settings you need to change are the username and password fields. Change these to your Gmail address and password and users will be able receive automated emails from the application.
+
+View more information on using the mail plugin at [http://grails.org/plugin/mail][grails-mail].
+
 [screenshot1]: https://github.com/caseyscarborough/homelink/raw/master/img/main.png "The application's main layout."
 [homelink]: http://localhost:8080/homelink
+[grails-mail]: http://grails.org/plugin/mail
