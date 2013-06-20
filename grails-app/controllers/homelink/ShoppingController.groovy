@@ -22,13 +22,13 @@ class ShoppingController {
 	
 	def addItem() {
 		def shoppingList = ShoppingList.get(params.id)
-		new ShoppingItem(name:params.name, list:shoppingList, isNeeded:true).save()
+		new ShoppingItem(name:params.name, list:shoppingList, isNeeded:true).save(flush:true)
 		render(template:"/shopping/shoppingList", model:[shoppingList:shoppingList])
 	}
 	
 	def addList() {
 		def shoppingList = new ShoppingList(name: params.name, description:"", owner:session.user, items: [:])
-		if(shoppingList.save()) {
+		if(shoppingList.save(flush:true)) {
 			render(template:"/shopping/shoppingLists", model:[shoppingLists:session.user.getShoppingLists()])
 		}
 	}
