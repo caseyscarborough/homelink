@@ -12,12 +12,12 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link href="/homelink/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="/homelink/css/main.css" rel="stylesheet" type="text/css" media="screen">
-		<link href="/homelink/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="${resource(dir: 'css', file: 'bootstrap.min.css')}" rel="stylesheet" media="screen">
+		<link href="${resource(dir: 'css', file: 'main.css')}" rel="stylesheet" type="text/css" media="screen">
+		<link href="${resource(dir: 'css', file: 'bootstrap-responsive.min.css')}" rel="stylesheet" type="text/css" media="screen">
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="/homelink/js/bootstrap.min.js"></script>
-		<script src="/homelink/js/application.js"></script>
+		<script src="${resource(dir: 'js', file: 'bootstrap.min.js')}"></script>
+		<script src="${resource(dir: 'js', file: 'application.js')}"></script>
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>

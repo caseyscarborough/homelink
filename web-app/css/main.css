@@ -1,8 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
 @font-face {
   font-family: 'Muli';
   font-style: normal;
   font-weight: 400;
-  src: local('Muli'), url(/homelink/fonts/muli.woff) format('woff');
 }
 
 /*
@@ -13,12 +14,12 @@ Grey-Tan: #f7eede;
 Grey-blue: #374140;
 Dark-grey: #2A2C2B;
 Almost-black: #1E1E20;
-
-
 */
+
+
 * {
-	-webkit-font-smoothing: antialiased;
-}
+/* 	-webkit-font-smoothing: antialiased;
+ */}
 
 html {
 	height: 100%;

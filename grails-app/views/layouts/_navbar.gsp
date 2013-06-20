@@ -16,7 +16,7 @@
 					<g:link controller="reminder" action="index">Reminders</g:link>
 				</li>
 				<g:if test="${controllerName == "todo"}"><li class="active"></g:if><g:else><li></g:else>
-					<g:link controller="todo" action="list">Todos</g:link>
+					<g:link controller="todo" action="list">To Do</g:link>
 				</li>
 			</ul>
 			<ul class="nav pull-right">

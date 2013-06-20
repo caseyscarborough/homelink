@@ -22,13 +22,13 @@ class TodoController {
 
 	def addItem() {
 		def todoList = TodoList.get(params.id)
-		new Todo(name:params.name, list:todoList, isNeeded:true).save()
+		new Todo(name:params.name, list:todoList, isNeeded:true).save(flush:true)
 		render(template:"/todo/todoList", model:[todoList:todoList])
 	}
 
 	def addList() {
 		def todoList = new TodoList(name: params.name, description:"", owner:session.user, items: [:])
-		if(todoList.save()) {
+		if(todoList.save(flush:true)) {
 			render(template:"/todo/todoLists", model:[todoLists:session.user.getTodoLists()])
 		}
 	}

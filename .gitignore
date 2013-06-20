@@ -13,6 +13,11 @@
 /*.tmproj
 /eclipse
 
+# IntelliJ Files
+/*.iml
+/*.ipr
+/projectFilesBackup
+
 # Logs
 stacktrace.log
 /*.log

@@ -9,10 +9,10 @@
 		<g:if env="development">
 			<g:renderException exception="${exception}" />
 		</g:if>
-		<g:else>
+		<g:elseif env="production">
 			<ul class="errors">
-				<li>An error has occurred</li>
+				<g:renderException exception="${exception}" />
 			</ul>
-		</g:else>
+		</g:elseif>
 	</body>
 </html>

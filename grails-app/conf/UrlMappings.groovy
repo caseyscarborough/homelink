@@ -9,8 +9,15 @@ class UrlMappings {
 		"/shopping"(controller:"shopping", action:"list")
 		"/todos"(controller:"todo", action:"index")
 		"/todos"(controller:"todo", action:"list")
-		"/reminders"(controller:"reminder", action:"index")
-		"/reminders"(controller:"reminder", action:"list")
+//		"/reminders"(controller:"reminder", action:"index")
+//		"/reminders"(controller:"reminder", action:"list")
+		"/reminders"(controller:"reminder") {
+			action = [GET: "list"]
+		}
+		
+		"/reminders/$id"(controller:"reminder") {
+			action = [POST: "addReminder", DELETE: "deleteReminder"]
+		}
 		"/new-account"(controller:"account", action:"create")
 		"/login"(controller:"session", action:"login")
 		"/logout"(controller:"session", action:"logout")

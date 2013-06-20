@@ -1,6 +1,6 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%
-	SimpleDateFormat formatter = new SimpleDateFormat("EEEEE, MMMMM dd', 'YYYY' at 'hh:mm a")
+	SimpleDateFormat formatter = new SimpleDateFormat("EEEEE',' MMMMM dd',' yyyy 'at' hh:mm a")
 	def timestamp = new Date()
 %>
 <g:if test="${reminders.size() > 0}">
@@ -10,8 +10,8 @@
 <div class="accordion-heading">
 	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#${i+1}"><h4<% if(timestamp < new Date(reminder.remindAt.getTime())) { println " style=\"color:#1E1E20;\"" } %>>${reminder}<span style="float:right;" id="reminder-${i}-close" class="close" 
 			onclick="${remoteFunction(
-				action: 'deleteReminder',
 				id: reminder.id,
+				method: 'DELETE',
 				update: [success: 'reminders']
 			)}">&times;</span></h4></a>
 	<div id="${i+1}" class="accordion-body collapse">

@@ -18,6 +18,19 @@ class User {
 		email(blank:false)
     }
 	
+	static mapping = {
+		table 'users'
+		password column: '`password`'
+	} 
+	
+	void setFirstName(String firstName) {
+		this.firstName = firstName.capitalize()
+	}
+	
+	void setLastName(String lastName) {
+		this.lastName = lastName.capitalize()
+	}
+	
 	String toString() {
 		"${firstName} ${lastName}"
 	}

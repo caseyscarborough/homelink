@@ -16,7 +16,7 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span6 offset3 main">
-		<h1 style="text-align:left">Todo Lists</h1>
+		<h1 style="text-align:left">To Do Lists</h1>
 		<br>
 		<div id="todoLists">
 			<g:render template="/todo/todoLists" />

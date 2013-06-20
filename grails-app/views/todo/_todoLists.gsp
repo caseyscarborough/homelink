@@ -26,6 +26,6 @@
 </div>
 </g:if>
 <g:else>
-You do not have any todo lists.
+You do not have any to-do lists.
 </g:else>
 

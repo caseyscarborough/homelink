@@ -40,7 +40,7 @@
 					will be implemented with time.</p>
 					</div>
 					<div class="span4 offset1">
-						<img src="/homelink/images/macbook.png" />
+						<img src="${resource(dir: 'images', file: 'macbook.png')}" />
 					</div>
 				</div>
 			</div>

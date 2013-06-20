@@ -4,15 +4,9 @@ import java.text.SimpleDateFormat;
 
 import org.springframework.dao.DataIntegrityViolationException;
 
-import homelink.Reminder;
-
 class ReminderController {
 
-    def index() {
-		if(session.user != null) {
-			redirect(action:"list")
-		}
-	}
+    static defaultAction = "list"
 	
 	def list() {
 		if(session.user != null) {
@@ -25,7 +19,7 @@ class ReminderController {
 			SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm")
 			Date remindAt = dateParser.parse(params.remindAt)
 			def reminder = new Reminder(name: params.name, description: params.description, owner: session.user, remindAt: remindAt)
-			if(reminder.save()) {
+			if(reminder.save(flush:true)) {
 				render(template: "/reminder/reminders", model: [reminders: session.user.getReminders()])
 			}
 		}
