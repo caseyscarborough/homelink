@@ -7,6 +7,8 @@ Users will be able to create a 'family' that other users can connect to. When a 
 
 The application is currently in the beginning stages of development, and more features will be implemented with time.
 
+You can check out a demo of the application at [homelink.caseyscarborough.com](http://homelink.caseyscarborough.com).
+
 A screenshot of the application in it's current state can be viewed below:
 
 ![alt text][screenshot1]
