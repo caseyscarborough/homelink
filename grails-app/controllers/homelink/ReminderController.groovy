@@ -29,7 +29,7 @@ class ReminderController {
 		def reminder = Reminder.get(id)
 		if(!reminder) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'reminder.label', default: 'Reminder'), id])
-			redirect(action: "list")
+			render(action: "list")
 			return
 		}
 		
